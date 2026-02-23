@@ -46,7 +46,7 @@ async function main() {
     const codigoNumerico = String(Math.floor(Math.random() * 99999999)).padStart(8, '0');
 
     // Generar secuencial único para cada prueba (basado en timestamp)
-    const secuencial = String(Date.now()).slice(-9).padStart(9, '0');
+    const secuencial = (String(Date.now()).slice(-5) + String(Math.floor(Math.random() * 9999)).padStart(4, '0')).padStart(9, '0');
 
     const claveAcceso = generarClaveAcceso({
         fechaEmision,
